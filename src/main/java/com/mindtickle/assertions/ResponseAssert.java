@@ -4,8 +4,6 @@ import io.restassured.response.Response;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.SoftAssertions;
 
-import java.util.function.Predicate;
-
 public class ResponseAssert extends AbstractAssert<ResponseAssert, Response> {
 
   private final SoftAssertions softAssertions;

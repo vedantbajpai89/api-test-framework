@@ -2,7 +2,6 @@ package com.mindtickle.api.builder.users;
 
 import com.mindtickle.api.BaseRequestSpecification;
 import com.mindtickle.api.pojos.users.UserDetails;
-import com.mindtickle.api.pojos.users.UserDetailsArray;
 import com.mindtickle.config.factory.ApiConfigFactory;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

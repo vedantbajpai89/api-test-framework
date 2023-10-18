@@ -9,7 +9,6 @@ import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.util.List;
 
 class UserTest {
