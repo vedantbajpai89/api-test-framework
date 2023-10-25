@@ -1,13 +1,11 @@
 package com.mindtickle.api.builder.users;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.mindtickle.api.BaseRequestSpecification;
 import com.mindtickle.api.pojos.users.UserDetails;
 import com.mindtickle.config.factory.ApiConfigFactory;
-import com.mindtickle.utils.fileutils.JSONFileReader;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.List;
 
@@ -15,6 +13,7 @@ public final class UserReqresApi {
 
   private UserReqresApi() {
   }
+  public  static ExtentTest test;
 
   private static final String GET_USERS_ENDPOINT = ApiConfigFactory.getConfig().listUserEndpoint();
   private static final String CREATE_USERS_ENDPOINT = ApiConfigFactory.getConfig().postUserEndpoint();

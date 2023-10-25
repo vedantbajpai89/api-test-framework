@@ -5,9 +5,9 @@ import com.mindtickle.assertions.ResponseAssert;
 import com.mindtickle.api.pojos.pets.PetDetails;
 import com.mindtickle.api.tests.pets.testdata.PetTestData;
 import com.mindtickle.config.factory.LoggerConfigFactory;
+import com.mindtickle.reports.ExtentReport;
 import io.restassured.response.Response;
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
@@ -24,6 +24,8 @@ class PetTest {
               .statusCodeIs(200)
               .hasContentType("application/json")
               .assertAll();
+    } catch (AssertionError e){
+      ExtentReport.attachFail(e.getMessage());
     } catch(Exception e){
       logger.error("An error occurred during the test: " + e.getMessage(), e);
     }
@@ -39,6 +41,8 @@ class PetTest {
               .statusCodeIs(200)
               .hasContentType("application/json")
               .assertAll();
+    } catch (AssertionError e){
+      ExtentReport.attachFail(e.getMessage());
     } catch(Exception e){
       logger.error("An error occurred during the test: " + e.getMessage(), e);
     }
@@ -54,6 +58,8 @@ class PetTest {
              .hasContentType("application/json")
              .hasKeyWithMultipleValue("status", petStatus)
              .assertAll();
+   } catch (AssertionError e){
+     ExtentReport.attachFail(e.getMessage());
    } catch(Exception e){
      logger.error("An error occurred during the test: " + e.getMessage(), e);
    }
