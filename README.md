@@ -1,4 +1,4 @@
-# mindtickle-framework
+# api-test-framework
 
 #About framework
 
